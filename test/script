@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Doing some random work..."
+echo "Done! :)"
