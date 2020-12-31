@@ -12,7 +12,7 @@ func TestSomething(t *testing.T) {
 		return
 	}
 
-	scriptPath, err := filepath.Abs(filepath.Join("..", "test", "script.exe"))
+	scriptPath, err := filepath.Abs(filepath.Join("..", "test", "script.bat"))
 	if err != nil {
 		panic(err)
 	}
