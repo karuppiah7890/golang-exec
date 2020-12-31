@@ -7,7 +7,7 @@ import (
 
 // Something does something
 func Something(scriptPath string) {
-	cmd := exec.Command(scriptPath)
+	cmd := exec.Command(scriptPath, "wow", "cool!")
 	output, err := cmd.CombinedOutput()
 	if err != nil {
 		panic(err)
