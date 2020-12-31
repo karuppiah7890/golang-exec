@@ -7,10 +7,14 @@ import (
 )
 
 func TestSomething(t *testing.T) {
-	if runtime.GOOS == "windows" {
-		Something(filepath.Join("..", "test", "script.exe"))
+	if runtime.GOOS != "windows" {
+		Something(filepath.Join("..", "test", "script"))
 		return
 	}
 
-	Something(filepath.Join("..", "test", "script"))
+	scriptPath, err := filepath.Abs(filepath.Join("..", "test", "script.exe"))
+	if err != nil {
+		panic(err)
+	}
+	Something(scriptPath)
 }
