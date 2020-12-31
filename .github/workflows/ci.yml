@@ -40,6 +40,8 @@ jobs:
 
       - name: Script Test
         run: ./test/script
+        shell: bash
 
       - name: Unit Test
         run: go test -v ./...
+        shell: bash
