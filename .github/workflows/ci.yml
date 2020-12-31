@@ -34,7 +34,9 @@ jobs:
             ${{ runner.os }}-go-
 
       - name: Environment
-        run: go env
+        run: |
+        env
+        go env
 
       - name: Unit Test
         run: go test -v ./...
