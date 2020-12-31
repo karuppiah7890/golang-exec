@@ -35,8 +35,8 @@ jobs:
 
       - name: Environment
         run: |
-        env
-        go env
+          env
+          go env
 
       - name: Unit Test
         run: go test -v ./...
